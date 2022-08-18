@@ -1,0 +1,17 @@
+import random
+
+number = random.randint(1, 10)
+attempt = 1
+guess = int(input("guess the number: "))
+
+while(True):
+    if(guess>number):
+        guess = int(input("guess another number, this number is too big: "))
+        attempt += 1
+    elif(guess<number):
+        guess = int(input("guess another number, this number is too less: "))
+        attempt += 1
+
+    else:
+        print(f"thats the number! you guessed it right in {attempt} attempts")
+        break
